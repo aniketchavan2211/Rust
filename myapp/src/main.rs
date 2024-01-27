@@ -1,3 +1,5 @@
 fn main() {
-    println!("Hello, rust !!!");
+    #![allow(warnings)]
+
+    println!("Hello !!!");
 }
