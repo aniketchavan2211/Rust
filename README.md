@@ -252,15 +252,26 @@ example: 2.4, 45.67, etc...
 }
 ```
 
-#### Strings
+#### strings
 
-Strings are like any other programming langauges strings, 
-alphanumeric value in double quotes `"Strings"`.
+##### strings literal (&str)
+strings are like any other programming langauges strings, 
+alphanumeric value in double quotes `"strings"`.
+
+- Static and Fixed Size:
+ - String literals are static and have a fixed size known at compile time.
+ - They are stored in the program's binary and are therefore more memory-efficient for constant, known values.
+
+- Immutable:
+ - String literals are immutable. Once defined, you cannot modify their contents.
+
+- UTF-8 Encoding:
+ - Like String, string literals in Rust are UTF-8 encoded.
 
 **Snippets**:
 ```rust
 {
-    let name: &str = "Aniket"; // Strings
+    let name: &str = "Aniket"; // strings
 }
 ```
 
@@ -272,6 +283,40 @@ To aviod warnings of snake case.
     let first_name: &str = "Aniket";
 }
 ```
+
+##### Strings (String::)
+
+`Strings` in Rust, represented by the `String` type, are used to handle and manipulate textual data. They are dynamic, growable, and UTF-8 encoded, allowing for flexibility in working with text. Let's explore why String is used and how it differs from string literals `&str`, along with examples of how to use them.
+
+- Dynamic and Growable:
+ - String allows you to create strings with dynamic lengths. You can append, modify, and manipulate the content during runtime.
+
+- Heap Allocated:
+ - String data is stored on the heap, allowing it to grow or shrink in size as needed.
+
+- UTF-8 Encoding:
+ - Strings in Rust are UTF-8 encoded by default, providing support for a wide range of characters and internationalization.
+
+- Ownership and Borrowing:
+ - Ownership rules apply to String. Ownership can be transferred, and borrowing ensures that only one part of the code has mutable access at a time.
+
+**Snippets**:
+```rust
+fn main() {
+    // Creating a new empty String
+    let mut new_string = String::new();
+
+    // Appending to the String
+    new_string.push_str("Hello, ");
+    new_string.push_str("world!");
+
+    // Printing the String
+    println!("{}", new_string); // prints "Hello, world!"
+}
+```
+
+> [!NOTE]
+> Understanding when to use String and when to use string literals `&str` depends on your specific use case. If you need a mutable dynamic string with variable length, use String. If you have a fixed-size, immutable string known at compile time, use a string literal `&str`.
 
 #### Booleans
 
@@ -428,4 +473,258 @@ The value is 11
 The value is 12
 The value is 14
 The value is 15
+```
+
+#### For Loops
+
+
+**Snippet**:
+```rust
+{
+    for i in 1..6 {
+        println!("The Line is: {}", i)
+    }
+}
+```
+
+This Loops from 1 to 5. index starts from 0, here range is set to `1..6`, 
+`start..end`.
+
+Also you make defined range in variable.
+**Snippets**:
+```rust
+{
+    let x = 1..6;
+
+    for i in x {
+        println!("The Number is: {}", i);
+    }
+}
+```
+
+Loops through elements.
+
+**Snippets**:
+```rust
+{
+    let fruits = vec!["orange", "apple", "mango"];
+
+    for (index, i) in fruits.iter().enumerate() {
+        println!("Fruits {} is {}", index, i);
+    }
+
+}
+```
+
+**Output**:
+```
+Fruits 0 is orange
+Fruits 1 is apple
+Fruits 2 is mango
+```
+
+#### While Loops 
+
+**Snippets**:
+```rust
+{
+    let mut num: i32 = 1;
+
+    while num < 6 {
+        println!("The Number is: {}", num);
+        num += 1;
+    }
+}
+```
+
+**Output**:
+```
+The Number is: 1
+The Number is: 2
+The Number is: 3
+The Number is: 4
+The Number is: 5
+```
+
+**Snippets**:
+```rust
+{
+    let mut num: i32 = 1;
+
+    while num < 10 {
+        if num % 2 == 0 {
+            println!("The Number {} is Even", num);
+        } else {
+            println!("The Number {} is Odd", num);
+        }
+        num += 1;
+    }
+}
+```
+
+**Output**:
+```
+The Number 1 is Odd
+The Number 2 is Even
+The Number 3 is Odd
+The Number 4 is Even
+The Number 5 is Odd
+The Number 6 is Even
+The Number 7 is Odd
+The Number 8 is Even
+The Number 9 is Odd
+```
+
+### Tuples
+
+Tuples is DataTypes in Rust, Which contains mixed datatypes like `strings`, `1`, `2.4`, `true` or even nested tuples.
+Tuples defined using Rounded Brackets `()`.
+
+**Snippet**:
+```rust
+{
+    let tuple = ("strings", 1, 2.4, true, (1, 2, 3));
+
+    println!("This is {}, Numbers are: {} and {}, Boolean value is {}, Nested Tuple is: ({}, {}, {})", 
+        tuple.0, tuple.1, tuple.2, tuple.3, (tuple.4).0, (tuple.4).1, (tuple.4).2);
+}
+```
+
+### Enum 
+
+An `enum` (enumeration) is a custom data type that allows you to define a type by enumerating its possible values. Each value is called a `variant`, and you can associate data with each `variant`.
+
+**Snippets**:
+```rust
+enum Color {
+    Red,
+    Green,
+    Blue,
+}
+
+enum Shape {
+    Circle(f64),
+    Rectangle(f64, f64),
+    Triangle(f64, f64, f64),
+}
+
+```
+
+- `Color` is an `enum` with variants representing different colors.
+- `Shape` is an `enum` with variants representing different geometric shapes, each with associated data.
+
+
+**Example**:
+```rust
+// Define an enum called TrafficLight with three variants
+enum TrafficLight {
+    Red,
+    Yellow,
+    Green,
+}
+
+// Main function to demonstrate the usage of the enum
+fn main() {
+    // Create instances of the TrafficLight enum
+    let red_light = TrafficLight::Red;
+    let yellow_light = TrafficLight::Yellow;
+    let green_light = TrafficLight::Green;
+
+    // Use match to pattern match and act accordingly
+    match red_light {
+        TrafficLight::Red => println!("Stop!"),
+        TrafficLight::Yellow => println!("Prepare to stop or go!"),
+        TrafficLight::Green => println!("Go!"),
+    }
+
+    // Pattern match another instance
+    match green_light {
+        TrafficLight::Red => println!("Stop!"),
+        TrafficLight::Yellow => println!("Prepare to stop or go!"),
+        TrafficLight::Green => println!("Go!"),
+    }
+}
+```
+
+**Output**:
+```
+Stop!
+Go!
+```
+
+- We define an enum named TrafficLight with three variants: Red, Yellow, and Green.
+- We create instances of the TrafficLight enum using those variants.
+- We use the match expression to pattern match on the enum instances and execute code based on the matched variant.
+
+In the first match, we match against red_light, and it prints "Stop!" because the variant is TrafficLight::Red. In the second match, we match against green_light, and it prints "Go!" because the variant is TrafficLight::Green.
+
+Enums are particularly useful for situations where you have a fixed set of possible values and want to express that in a clear and type-safe manner. The match expression is a powerful tool for handling different cases or variants and allows you to write concise and expressive code.
+
+#### Pattern Matching
+
+Pattern matching is a powerful feature in Rust that allows you to destructure and inspect the values of enums or other data types. The match keyword is used for pattern matching.
+
+**Snippets**:
+```rust
+fn main() {
+    let color = Color::Blue;
+
+    match color {
+        Color::Red => println!("It's red!"),
+        Color::Green => println!("It's green!"),
+        Color::Blue => println!("It's blue!"),
+    }
+
+    let shape = Shape::Circle(3.0);
+
+    match shape {
+        Shape::Circle(radius) => println!("Circle with radius {}", radius),
+        Shape::Rectangle(width, height) => println!("Rectangle with width {} and height {}", width, height),
+        Shape::Triangle(side1, side2, side3) => println!("Triangle with sides {}, {}, and {}", side1, side2, side3),
+    }
+}
+```
+
+- We use match to compare the value of color and execute the corresponding block of code.
+- Similarly, we use match to destructure the shape and print information based on its variant and associated data.
+
+### Functions
+
+**Snippets**:
+```rust
+fn add(x: i32, y: i32) {
+    // Adding two Numbers
+    let z: i32 = x + y; 
+    println!("The Total of {} + {} is: {}", x, y, z);
+}
+
+
+fn main() {
+
+    // Calling a function
+    add(23, 43);
+
+}
+```
+
+**Output**:
+```
+The Total of 23 + 43 is: 66
+```
+
+**Snippets**:
+```rust
+fn main() {
+
+    // Using predefined methods
+    let strings: &str = "strings";
+
+    println!("The Total Length of Variable strings is: {}", strings.len());
+
+}
+```
+
+**Output**:
+```
+The Total Length of Variable strings is: 7
 ```
