@@ -20,7 +20,9 @@ The Rust programming language helps you write faster, more reliable software. Hi
 - Better memory management control.
 - Rust uses Ownership & Borrowing.
 
-### Quick Installation
+### Quick Start
+
+#### Installations
 
 On Linux
 
@@ -40,11 +42,7 @@ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 rustc --version
 ```
 
-### Cargo - Package Manager
-
-`Cargo` is Rust’s build system and package manager. Most `Rustaceans ( Rust Porgrammers )` use this tool to manage their Rust projects because Cargo handles a lot of tasks for you, such as building your code, downloading the libraries your code depends on, and building those libraries. (We call the libraries that your code needs dependencies.)
-
-### Hello, World
+#### Hello, World
 
 - Using rustc
 
@@ -122,6 +120,12 @@ Some cargo commands:
 6. `cargo run`: `cargo r`
 
 7. `cargo clean`
+
+### Cargo - Package Manager
+
+`Cargo` is Rust’s build system and package manager. Most `Rustaceans ( Rust Porgrammers )` use this tool to manage their Rust projects because Cargo handles a lot of tasks for you, such as building your code, downloading the libraries your code depends on, and building those libraries. (We call the libraries that your code needs dependencies.)
+
+
 
 ### Variables and Datatypes
 
