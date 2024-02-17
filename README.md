@@ -40,38 +40,6 @@ curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf | sh
 rustc --version
 ```
 
-#### Ownership & Borrowing
-
-Variables are immutable by default, means you can change value of variable.
-
-```rust
-let greetings = "Hello";
-```
-
-To make a variable mutable, add `mut` keyword before variable name.
-
-```rust
-let mut greetings = "Hello, Rust !!!";
-```
-
-now greetings variable value can change.
-
-Variable is the `OWNER` of the value.
-
-```rust
-let z_owner = Flat::new();
-```
-
-when variable is not longer is needed Memory allocated is dropped.
-```rust
-{
-    let z_owner = Flat::new();
-
-    drop(z_onwer)
-}
-```
-
-
 ### Cargo - Package Manager
 
 `Cargo` is Rust’s build system and package manager. Most `Rustaceans ( Rust Porgrammers )` use this tool to manage their Rust projects because Cargo handles a lot of tasks for you, such as building your code, downloading the libraries your code depends on, and building those libraries. (We call the libraries that your code needs dependencies.)
@@ -156,6 +124,37 @@ Some cargo commands:
 7. `cargo clean`
 
 ### Variables and Datatypes
+
+#### Ownership & Borrowing
+
+Variables are immutable by default, means you can change value of variable.
+
+```rust
+let greetings = "Hello";
+```
+
+To make a variable mutable, add `mut` keyword before variable name.
+
+```rust
+let mut greetings = "Hello, Rust !!!";
+```
+
+now greetings variable value can change.
+
+Variable is the `OWNER` of the value.
+
+```rust
+let z_owner = Flat::new();
+```
+
+when variable is not longer is needed Memory allocated is dropped.
+```rust
+{
+    let z_owner = Flat::new();
+
+    drop(z_onwer)
+}
+```
 
 #### Numbers 
 
