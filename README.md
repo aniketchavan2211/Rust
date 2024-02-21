@@ -457,12 +457,19 @@ Aniket is Programming in Rust.
 
 **Define multiple variables in one line**
 
+Define a name of variable in tuple and using `=` assigning value in tuple. 
+
 **Snippets**:
 ```rust
 {
     let(first_name, last_name) = ("Aniket", "Chavan");
-    println!("My self {}, {}", first_name, last_name);
+    println!("My self {} {}", first_name, last_name);
 }
+```
+
+**Output**:
+```
+My self Aniket Chavan
 ```
 
 **Math Calculation**
@@ -470,11 +477,12 @@ Aniket is Programming in Rust.
 **Snippets**:
 ```rust
 {
-    println!("20 + 4 = {}", 20 + 4);
-    println!("20 - 4 = {}", 20 - 4);
-    println!("20 x 4 = {}", 20 * 4);
-    println!("20 / 4 = {}", 20 / 4);
-    println!("20 % 4 = {}", 20 % 4);
+    // Arithmetic Operations
+    println!("20 + 4 = {}", 20 + 4); // Addition
+    println!("20 - 4 = {}", 20 - 4); // Subtraction
+    println!("20 x 4 = {}", 20 * 4); // Multiply
+    println!("20 / 4 = {}", 20 / 4); // Division
+    println!("20 % 4 = {}", 20 % 4); // Modulus
 }
 ```
 
@@ -504,6 +512,12 @@ You are under age !!!
 ```
 
 ### Loops 
+
+Loops are control flow structures in programming that allow a certain block of code to be executed repeatedly based on a specified condition. They are used for iterating over sequences, performing repetitive tasks, and controlling the flow of a program.
+
+#### loop
+
+The `loop` keyword creates an `infinite loop`, which continues to execute until explicitly interrupted or broken out of using the `break` statement.
 
 ```rust
 
@@ -547,6 +561,7 @@ The value is 15
 
 #### For Loops
 
+The `for` keyword is used to iterate over a `range`, `collection`, or any type that implements the `Iterator trait`. It is often used for iterating over a sequence of values.
 
 **Snippet**:
 ```rust
@@ -595,6 +610,12 @@ Fruits 2 is mango
 
 #### While Loops 
 
+The `while` keyword introduces a loop that continues executing the block of code as long as a specified condition is `true`.
+
+Firstly we defined and initialized mutable variable `num` with the help of `let` and `mut` keyword, assign value of `1` with datatype of `i32`.
+`while loop` start with `while` keyword, then condition here we are checking values less than 6, block of code in mention in two curly braces `{}`.
+for increment and decrement mention in block of code, make sure to end the statement with semicolon `;`.
+
 **Snippets**:
 ```rust
 {
@@ -606,6 +627,8 @@ Fruits 2 is mango
     }
 }
 ```
+
+loop starting checking for variable value `1`, condition is `false`, on terminal it's prints what is in code written, in block of code increment by 1 `num += 1;`, every time loop runs 1 adds in variable. check for next condition, if condition false, repeat, loops runs until condition is `true`.loop will terminate successfully.
 
 **Output**:
 ```
@@ -663,6 +686,8 @@ Tuples defined using Rounded Brackets `()`.
 ### Enum 
 
 An `enum` (enumeration) is a custom data type that allows you to define a type by enumerating its possible values. Each value is called a `variant`, and you can associate data with each `variant`.
+
+Where structs give you a way of grouping together related `fields` and `data`, like a `Rectangle` with its `width` and `height`, `enums` give you a way of saying a value is one of a possible `set of values`. For example, we may want to say that `Rectangle` is one of a set of possible shapes that also includes `Circle` and `Triangle`. To do this, Rust allows us to encode these possibilities as an `enum`.
 
 **Snippets**:
 ```rust
