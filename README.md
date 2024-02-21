@@ -325,6 +325,8 @@ fn main() {
 
 #### Booleans
 
+The boolean type or `bool` is a primitive data type that can take on one of two values, called `true` and `false`, Values of this type may be created using a literal expression using the keywords `true` and `false` corresponding to the value of the same name. This type is a part of the language prelude with the name `bool`.
+
 ```rust
 {
     let is_valid: bool = true; // true / false
@@ -332,6 +334,8 @@ fn main() {
 ```
 
 #### Characters
+
+The `char` type represents a single character. More specifically, since `character` isn’t a well-defined concept in `Unicode`, `char` is a `Unicode scalar value`.
 
 ```rust
 {
