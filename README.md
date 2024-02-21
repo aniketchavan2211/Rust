@@ -391,6 +391,61 @@ Comments follow the general C++ style of line `//` and block `/* ... */` comment
 
 ### Input / Output
 
+#### Input
+
+##### Read Trait
+
+Reading input from an input device in the form of `Bytes` is done by Rust components called `Readers`. The `read_line()` function is used to `read data`, one line at a time from an `input stream` or `file`.
+
+**Snippets**:
+```rust
+use std::io;
+ 
+fn main() {
+    println!("Enter a name:");
+    let mut guess = String::new();
+ 
+    io::stdin().read_line(&mut guess).expect("failed to readline");
+ 
+    print!("You entered {}", guess);
+}
+```
+
+Same as in other programming languages, we use `std::io`(standard input/output) library to get input using the `read_line()` function similar to `scanf()` in C language. The `let` and `mut` are keywords to create a mutable variable that can hold the given string.
+
+**Output**:
+```
+Enter a name:
+Aniket
+You entered Aniket
+```
+
+
+##### Write Trait
+
+The `Writers` in Rust are programs that can `write data` to a `file` or an `output stream` in `bytes`. The `write()` method is used for this purpose.
+
+**Snippets**:
+```rust
+use std::io::Write;
+fn main() {
+   let var1 = std::io::stdout()
+        .write("Aniket ".as_bytes()).unwrap();
+
+   let var2 = std::io::stdout()
+        .write(String::from("is Programming in Rust.").as_bytes()).unwrap();
+
+   std::io::stdout()
+        .write(format!("\n{} bytes of data has been written!",(var1+var2)).as_bytes()).unwrap();
+}
+```
+
+**Output**:
+```
+Aniket is Programming in Rust.
+30 bytes of data has been written!   
+```
+
 #### Output
 
 ```rust
