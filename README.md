@@ -365,7 +365,11 @@ fn main() {
 
 ### Comments
 
+Comments follow the general C++ style of line `//` and block `/* ... */` comment forms. Nested block comments are supported.
+
 #### Single - Line Comments
+
+`Single-line Comments` in Rust are denoted by two forward slashes `//`. Anything following `//` on the same line is treated as a `comment` and is ignored by the compiler.
 
 **Snippets**:
 ```rust
@@ -373,6 +377,8 @@ fn main() {
 ```
 
 #### Multi - Line Comments
+
+`Multi-line Comments` in Rust are enclosed between `/* and */`. Everything between these delimiters is treated as a `comment`, even if it spans `Multiple Lines`.
 
 **Snippets**:
 ```rust
