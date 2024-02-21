@@ -785,6 +785,60 @@ fn main() {
 
 ### Functions
 
+`Functions` are used to group code into reusable and modular units.
+
+- Function Declaration:
+
+Define a function using the fn keyword, Specify the `function name`, `parameters`, `return type`, and `body`.
+
+```rust
+fn add_numbers(x: i32, y: i32) -> i32 {
+    x + y
+}
+```
+
+- Parameters:
+
+Functions can take parameters, which are variables passed to the function. Parameters must declare their type.
+
+```rust
+fn greet(name: &str) {
+    println!("Hello, {}!", name);
+}
+```
+
+- Return Type:
+
+Specify the return type after an arrow `->` in the function declaration. If a function doesn't return a value, use `()`.
+
+```rust
+fn square(x: i32) -> i32 {
+    x * x
+}
+```
+
+- Function Body:
+
+Contains the code executed when the function is called. The last expression in the body is the implicit return value.
+
+- Calling Functions:
+
+Invoke a function by using its name followed by parentheses. Pass arguments that match the function's parameter types.
+
+```rust
+let result = add_numbers(3, 5);
+```
+
+- Function Visibility:
+
+Functions are private by default. Use the pub keyword to make them public.
+
+```rust
+pub fn public_function() {
+    // Code
+}
+```
+
 **Snippets**:
 ```rust
 fn add(x: i32, y: i32) {
