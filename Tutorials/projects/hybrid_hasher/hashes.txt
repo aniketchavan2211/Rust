@@ -1,0 +1,60 @@
+P@$$w0rD!@#%^&*()_+-=[]{}|;':",./<>?`~✓∆🚀漢字🔥🌐:
+  C    : c3599befb6be869f81cf0873f510ca25998be2bd1ffbec303545cc87cb6d0e10
+  Time : 0.001644 sec
+  Rust : c3599befb6be869f81cf0873f510ca25998be2bd1ffbec303545cc87cb6d0e10
+  Time : 0.000033 sec
+
+$(python3 -c "print('a'*1000000)"):
+  C    : 4cc725bc5209c71b85db33561883002f30154110f34d690d82ea26c0d115318c
+  Time : 0.000014 sec
+  Rust : 4cc725bc5209c71b85db33561883002f30154110f34d690d82ea26c0d115318c
+  Time : 0.000008 sec
+
+Th1sIs@VeryL0ngPassw0rdWithSpe#ial\$CharsAnd1234567890ThatNeverEnds...:
+  C    : 6cc8b88d219592e40128ee327ca3a21c317f246252f661f52a8e23674084ad3e
+  Time : 0.000007 sec
+  Rust : 6cc8b88d219592e40128ee327ca3a21c317f246252f661f52a8e23674084ad3e
+  Time : 0.000006 sec
+
+🔐🔥🚀🔒🐍💻🌐📡☠️🧠⏳🧪🌈🔮📦📁🧩🎛️📟🧲🛰️:
+  C    : e8f7fdd3a2897ddd96d4c040257343792e730c3f9dbe5eeb2b5642bcb253ee4a
+  Time : 0.000006 sec
+  Rust : e8f7fdd3a2897ddd96d4c040257343792e730c3f9dbe5eeb2b5642bcb253ee4a
+  Time : 0.000006 sec
+
+𝓣𝓱𝓲𝓼𝓘𝓼𝓐𝓢𝓽𝔂𝓵𝓲𝓼𝓱𝓟𝓪𝓼𝓼𝔀𝓸𝓻𝓭:
+  C    : 233e86bdd5f52ba997b1336af9ecbe40c0c9dc076756fced88f0cb88ef7dbe6b
+  Time : 0.000006 sec
+  Rust : 233e86bdd5f52ba997b1336af9ecbe40c0c9dc076756fced88f0cb88ef7dbe6b
+  Time : 0.000006 sec
+
+password123password123password123password123password123:
+  C    : f719f55537b0e573ee498b3d429e10ba4d2bf1639d2c539b637f8b7441e703ca
+  Time : 0.000006 sec
+  Rust : f719f55537b0e573ee498b3d429e10ba4d2bf1639d2c539b637f8b7441e703ca
+  Time : 0.000005 sec
+
+۞۩۝۞۩۝۞۩۝۞۩۝۞۩۝۞۩۝۞۩۝:
+  C    : 1e8a63386f3efa57275d6e6939643d5e80b3603e31d4cdbfcdaafa2f5df3c048
+  Time : 0.000005 sec
+  Rust : 1e8a63386f3efa57275d6e6939643d5e80b3603e31d4cdbfcdaafa2f5df3c048
+  Time : 0.000005 sec
+
+🎉🔐🔓🚨🛡️⚔️💾🖥️📀🔧⚙️:
+  C    : e95856864bcd3d2ba70fcad678637a0741b1141aeb5d5404683bf12edc105ad8
+  Time : 0.000005 sec
+  Rust : e95856864bcd3d2ba70fcad678637a0741b1141aeb5d5404683bf12edc105ad8
+  Time : 0.000005 sec
+
+z̸̝͎̞͑̓̿ͪͤ̿͗̐̾ͦͮ́͘a̴̡͈̹̞͓̠̠͇͙̬͖͇͕͓ͅl̡̛̹͉͎̩͇̤͓̥ͅg̵̶̤͖̳̮͚̰̰͡ơ̵̡̘͕:
+  C    : f7b94506b0e71be43f3e9070cb583c330e007945f21f7cfc58fe805fd48ec9e5
+  Time : 0.000006 sec
+  Rust : f7b94506b0e71be43f3e9070cb583c330e007945f21f7cfc58fe805fd48ec9e5
+  Time : 0.000006 sec
+
+base64(\$%&*#@!+{}|":?><ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789):
+  C    : 75b7ceb0fd38bb002f3dce91b8d67721aacd0ec70b59e33a13d245fa369f3332
+  Time : 0.000005 sec
+  Rust : 75b7ceb0fd38bb002f3dce91b8d67721aacd0ec70b59e33a13d245fa369f3332
+  Time : 0.000005 sec
+
